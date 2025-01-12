@@ -1,0 +1,10 @@
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Ivaka2\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\Calculator.Calculator.resources
