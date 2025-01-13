@@ -18,8 +18,7 @@ namespace Calculator
         private double num1 = 0;
         private double num2 = 0;
         private bool isOperationPerformed = false;
-        private bool clearButton = false;
-        private bool newComputation = false;
+        private bool clearTextBox1 = false;
 
         public Calculator()
         {
@@ -29,10 +28,10 @@ namespace Calculator
         private void numberButton(object sender, EventArgs e)
         {
             //if entering second number OR after computations
-            if (newComputation) 
+            if (clearTextBox1) 
             {
                 textBox1.Text = "";
-                newComputation = false;
+                clearTextBox1 = false;
             }
             double pressedButton = double.Parse(((Button)sender).Text);
             string combination = textBox1.Text + pressedButton.ToString();
@@ -57,7 +56,7 @@ namespace Calculator
                 Button button = (Button)sender;
                 operationPerformed = button.Text;
                 isOperationPerformed = true;
-                newComputation = true;
+                clearTextBox1 = true;
 
                 num1 = double.Parse(textBox1.Text);
                 textBox2.Text = num1.ToString() + operationPerformed;
@@ -110,15 +109,18 @@ namespace Calculator
             else
             {
                 MessageBox.Show("Nothing to delete");
-                endOfComputation();
+                ResetComputation();
             }
         }
         private void clear_Click(object sender, EventArgs e)
         {
-            clearButton = true;
             resultValue = 0;
-            textBox1.Text = "";
-            endOfComputation();
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            num1 = 0;
+            num2 = 0;
+            isOperationPerformed = false;
+            clearTextBox1 = true;
         }
 
         private void equals_Click(object sender, EventArgs e)
@@ -149,20 +151,21 @@ namespace Calculator
                     resultValue = (num1 * num2) / 100;
                     break;
                 default:
-                    break;
+                    MessageBox.Show("Error: Unknown operation.");
+                    return;
             }
             textBox1.Text = resultValue.ToString();
-            endOfComputation();
+            ResetComputation();
         }
 
-        private void endOfComputation()
+        private void ResetComputation()
         {
-            if (operationPerformed == "%" && clearButton == false)
+            if (operationPerformed == "%")
             {
                 string output = num1 + operationPerformed + " of " + num2 + " = " + resultValue;
                 History.Items.Add(output);
             }
-            else if (clearButton == false)
+            else if (operationPerformed != "")
             {
                 string output = num1 + " " + operationPerformed + " " + num2 + " = " + resultValue;
                 History.Items.Add(output);
@@ -172,8 +175,7 @@ namespace Calculator
             num2 = 0;
             textBox2.Text = string.Empty;
             isOperationPerformed = false;
-            newComputation = true;
-            clearButton = false;
+            clearTextBox1 = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
