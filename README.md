@@ -69,7 +69,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
-
-- Thanks to the developers of the .NET Framework and Visual Studio for providing the tools to build this application.
 

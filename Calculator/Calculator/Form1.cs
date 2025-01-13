@@ -15,11 +15,11 @@ namespace Calculator
     {
         private double resultValue = 0;
         private string operationPerformed = "";
-        double num1 = 0;
-        double num2 = 0;
+        private double num1 = 0;
+        private double num2 = 0;
         private bool isOperationPerformed = false;
-        bool clearButton = false;
-        bool newComputation = false;
+        private bool clearButton = false;
+        private bool newComputation = false;
 
         public Calculator()
         {
@@ -31,7 +31,7 @@ namespace Calculator
             //if entering second number OR after computations
             if (newComputation) 
             {
-                textBox1.Text = string.Empty;
+                textBox1.Text = "";
                 newComputation = false;
             }
             double pressedButton = double.Parse(((Button)sender).Text);
@@ -40,8 +40,10 @@ namespace Calculator
         }
         private void point_Click(object sender, EventArgs e)
         {
-            string temp = textBox1.Text + ".";
-            textBox1.Text = temp;
+            if (!textBox1.Text.Contains("."))
+            {
+                textBox1.Text += ".";
+            }
         }
 
         private void operation(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace Calculator
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error unknown");
             }
         }
 
