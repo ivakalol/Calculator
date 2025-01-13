@@ -94,9 +94,6 @@ A simple calculator application built using Windows Forms in C#. This calculator
 - **Delete Button (DEL):** Remove the last character from the input.
 - **Percentage Button (%):** Calculate the percentage.
 
-## View Project
-![Calculator Interface](Screenshot_1.png)
-
 ## Contributing
 Contributions are welcome! Follow these steps:
 1. Fork the repository.
