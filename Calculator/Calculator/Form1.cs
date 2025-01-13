@@ -13,105 +13,180 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
+        private double resultValue = 0;
+        private string operationPerformed = "";
+        double num1 = 0;
+        double num2 = 0;
+        private bool isOperationPerformed = false;
+        bool clearButton = false;
+        bool newComputation = false;
 
         public Calculator()
         {
             InitializeComponent();
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
-        private void previewPanel_Paint(object sender, PaintEventArgs e)
+        private void numberButton(object sender, EventArgs e)
         {
-            
+            //if entering second number OR after computations
+            if (newComputation) 
+            {
+                textBox1.Text = string.Empty;
+                newComputation = false;
+            }
+            double pressedButton = double.Parse(((Button)sender).Text);
+            string combination = textBox1.Text + pressedButton.ToString();
+            textBox1.Text = combination;
+        }
+        private void point_Click(object sender, EventArgs e)
+        {
+            string temp = textBox1.Text + ".";
+            textBox1.Text = temp;
         }
 
-        private void zero_Click(object sender, EventArgs e)
+        private void operation(object sender, EventArgs e)
         {
+            if (isOperationPerformed)
+            {
+                MessageBox.Show("Cannot perform two operations at once");                
+            }
+            else if (textBox1.Text.Length != 0)
+            {
+                num1 = double.Parse(textBox1.Text);
 
-        }
-        private void one_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void two_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void three_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void four_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void five_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void six_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void seven_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eight_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nine_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void minus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void plus_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void times_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void devide_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void procent_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void clear_Click(object sender, EventArgs e)
-        {
-
+                Button button = (Button)sender;
+                operationPerformed = button.Text;
+                textBox1.Text += operationPerformed;
+                isOperationPerformed = true;
+                newComputation = true;
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
+            //during operation
+            if (isOperationPerformed && textBox1.Text.Length != 0) 
+            {
+                isOperationPerformed = false;
+                textBox1.Text = textBox1.Text.Remove(0, 1);
+            }
+            //during first num input
+            else if ((textBox1.Text.Length > 0) && !isOperationPerformed)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+                string combination = textBox1.Text;
+                if (combination.Length == 0)
+                {
+                    num1 = 0;
+                }
+                else
+                {
+                    num1 = double.Parse(combination);
+                }
+                textBox1.Text = combination;
+            }
+            //during second num input
+            else if ((textBox1.Text.Length > 0) && isOperationPerformed)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+                string combination = textBox1.Text;
+                if (combination.Length == 0)
+                {
+                    num2 = 0;
+                }
+                else
+                {
+                    num2 = double.Parse(combination);
+                }
+                textBox1.Text = combination;
+            }
+            else
+            {
+                MessageBox.Show("Nothing to delete");
+                endOfComputation();
+            }
+        }
+        private void clear_Click(object sender, EventArgs e)
+        {
+            clearButton = true;
+            textBox1.Text = "";
+            endOfComputation();
+        }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            num2 = double.Parse(textBox1.Text);
+            switch (operationPerformed)
+            {
+                case "+":
+                    resultValue = num1 + num2;
+                    break;
+                case "-":
+                    resultValue = num1 - num2;
+                    break;
+                case "*":
+                    resultValue = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 != 0)
+                    {
+                        resultValue = num1 / num2;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cannot divide by zero");
+                    }
+                    break;
+                case "%":
+                    resultValue = (num1 * num2) / 100;
+                    break;
+                default:
+                    break;
+            }
+            textBox1.Text = "";
+            endOfComputation();
+        }
+
+        private void endOfComputation()
+        {
+            if (operationPerformed == "%" && clearButton == false)
+            {
+                string output = num1 + operationPerformed + " of " + num2 + " = " + resultValue;
+                History.Items.Add(output);
+            }
+            else if (clearButton == false)
+            {
+                string output = num1 + " " + operationPerformed + " " + num2 + " = " + resultValue;
+                History.Items.Add(output);
+            }
+            
+            num1 = 0;
+            num2 = 0;
+            resultValue = 0;
+            isOperationPerformed = false;
+            newComputation = true;
+            clearButton = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void point_Click(object sender, EventArgs e)
+        private void History_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
         }
     }
 }

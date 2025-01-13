@@ -48,6 +48,9 @@
             this.equals = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.History = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // clear
@@ -74,7 +77,7 @@
             this.times.TabIndex = 2;
             this.times.Text = "*";
             this.times.UseVisualStyleBackColor = false;
-            this.times.Click += new System.EventHandler(this.times_Click);
+            this.times.Click += new System.EventHandler(this.operation);
             // 
             // devide
             // 
@@ -87,7 +90,7 @@
             this.devide.TabIndex = 3;
             this.devide.Text = "/";
             this.devide.UseVisualStyleBackColor = false;
-            this.devide.Click += new System.EventHandler(this.devide_Click);
+            this.devide.Click += new System.EventHandler(this.operation);
             // 
             // procent
             // 
@@ -100,7 +103,7 @@
             this.procent.TabIndex = 4;
             this.procent.Text = "%";
             this.procent.UseVisualStyleBackColor = false;
-            this.procent.Click += new System.EventHandler(this.procent_Click);
+            this.procent.Click += new System.EventHandler(this.operation);
             // 
             // plus
             // 
@@ -113,7 +116,7 @@
             this.plus.TabIndex = 8;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = false;
-            this.plus.Click += new System.EventHandler(this.plus_Click);
+            this.plus.Click += new System.EventHandler(this.operation);
             // 
             // nine
             // 
@@ -125,7 +128,7 @@
             this.nine.TabIndex = 7;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = true;
-            this.nine.Click += new System.EventHandler(this.nine_Click);
+            this.nine.Click += new System.EventHandler(this.numberButton);
             // 
             // eight
             // 
@@ -137,7 +140,7 @@
             this.eight.TabIndex = 6;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = true;
-            this.eight.Click += new System.EventHandler(this.eight_Click);
+            this.eight.Click += new System.EventHandler(this.numberButton);
             // 
             // seven
             // 
@@ -149,7 +152,7 @@
             this.seven.TabIndex = 5;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = true;
-            this.seven.Click += new System.EventHandler(this.seven_Click);
+            this.seven.Click += new System.EventHandler(this.numberButton);
             // 
             // minus
             // 
@@ -162,7 +165,7 @@
             this.minus.TabIndex = 12;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = false;
-            this.minus.Click += new System.EventHandler(this.minus_Click);
+            this.minus.Click += new System.EventHandler(this.operation);
             // 
             // six
             // 
@@ -174,7 +177,7 @@
             this.six.TabIndex = 11;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
-            this.six.Click += new System.EventHandler(this.six_Click);
+            this.six.Click += new System.EventHandler(this.numberButton);
             // 
             // five
             // 
@@ -186,7 +189,7 @@
             this.five.TabIndex = 10;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
-            this.five.Click += new System.EventHandler(this.five_Click);
+            this.five.Click += new System.EventHandler(this.numberButton);
             // 
             // four
             // 
@@ -198,7 +201,7 @@
             this.four.TabIndex = 9;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = true;
-            this.four.Click += new System.EventHandler(this.four_Click);
+            this.four.Click += new System.EventHandler(this.numberButton);
             // 
             // zero
             // 
@@ -210,7 +213,7 @@
             this.zero.TabIndex = 16;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = true;
-            this.zero.Click += new System.EventHandler(this.zero_Click);
+            this.zero.Click += new System.EventHandler(this.numberButton);
             // 
             // three
             // 
@@ -222,7 +225,7 @@
             this.three.TabIndex = 15;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
-            this.three.Click += new System.EventHandler(this.three_Click);
+            this.three.Click += new System.EventHandler(this.numberButton);
             // 
             // two
             // 
@@ -234,7 +237,7 @@
             this.two.TabIndex = 14;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = true;
-            this.two.Click += new System.EventHandler(this.two_Click);
+            this.two.Click += new System.EventHandler(this.numberButton);
             // 
             // one
             // 
@@ -246,7 +249,7 @@
             this.one.TabIndex = 13;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
-            this.one.Click += new System.EventHandler(this.one_Click);
+            this.one.Click += new System.EventHandler(this.numberButton);
             // 
             // point
             // 
@@ -270,6 +273,7 @@
             this.equals.TabIndex = 18;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = true;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // delete
             // 
@@ -286,10 +290,60 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 40);
+            this.textBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox1.Location = new System.Drawing.Point(12, 270);
+            this.textBox1.MaxLength = 3267777;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 20);
-            this.textBox1.TabIndex = 20;
+            this.textBox1.ReadOnly = true;
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(383, 86);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // History
+            // 
+            this.History.BackColor = System.Drawing.Color.LightCoral;
+            this.History.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.History.FormattingEnabled = true;
+            this.History.ItemHeight = 24;
+            this.History.Location = new System.Drawing.Point(12, 9);
+            this.History.Name = "History";
+            this.History.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.History.Size = new System.Drawing.Size(383, 196);
+            this.History.TabIndex = 23;
+            this.History.SelectedIndexChanged += new System.EventHandler(this.History_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(335, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "History";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(12, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Calculator";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Calculator
             // 
@@ -298,6 +352,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(407, 756);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.History);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.equals);
@@ -349,6 +406,9 @@
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox History;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
