@@ -1,4 +1,4 @@
-# Calculator
+<!-- # Calculator
 
 A simple calculator application built using Windows Forms in C#. This calculator supports basic arithmetic operations such as addition, subtraction, multiplication, division, and percentage calculations. It also maintains a history of computations.
 
@@ -24,8 +24,7 @@ A simple calculator application built using Windows Forms in C#. This calculator
 
 ### Running the Application
 
-1. Build the solution by clicking on `Build > Build Solution` or pressing `Ctrl+Shift+B`.
-2. Run the application by clicking on `Debug > Start Debugging` or pressing `F5`.
+1. Run the already builded release from ```Calculator\bin\Release\Calculator.exe```
 
 ## Usage
 
@@ -37,25 +36,9 @@ A simple calculator application built using Windows Forms in C#. This calculator
 - **Decimal Point Button (.)**: Click to add a decimal point to the current input.
 - **Percentage Button (%)**: Click to calculate the percentage.
 
-## Code Overview
+## View Project
 
-### Main Form (`Form1.cs`)
-
-- **Variables**:
-  - `resultValue`: Stores the result of the computation.
-  - `operationPerformed`: Stores the current operation.
-  - `num1`, `num2`: Stores the operands.
-  - `isOperationPerformed`: Indicates if an operation is currently being performed.
-  - `clearButton`, `newComputation`: Flags for managing input states.
-
-- **Methods**:
-  - `numberButton`: Handles number button clicks.
-  - `point_Click`: Handles decimal point button clicks.
-  - `operation`: Handles operator button clicks.
-  - `delete_Click`: Handles delete button clicks.
-  - `clear_Click`: Handles clear button clicks.
-  - `equals_Click`: Handles equals button clicks and performs the computation.
-  - `endOfComputation`: Resets the calculator state and updates the history.
+![Calculator Interface](Screenshot_1.png "Calculator Application Interface")
 
 ### History
 
@@ -67,6 +50,75 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. -->
 
 
+
+
+# Calculator
+
+![Calculator Interface](Screenshot_1.png "Calculator Application Interface")
+
+A simple calculator application built using Windows Forms in C#. This calculator supports basic arithmetic operations such as addition, subtraction, multiplication, division, and percentage calculations. It also maintains a history of computations.
+
+## Features
+- **Basic Arithmetic Operations:** Supports addition, subtraction, multiplication, and division.
+- **Percentage Calculation:** Quickly calculate percentages with the `%` button.
+- **History:** Keeps track of previous computations.
+- **Clear and Delete Features:** Reset inputs or remove the last character.
+- **User-Friendly Interface:** Intuitive layout with clear labels and buttons.
+
+## Getting Started
+
+### Prerequisites
+- Visual Studio 2022
+- .NET Framework 4.7.2
+
+### Installation
+1. Clone the repository: 
+   ```bash
+   git clone https://github.com/ivakalol/Calculator
+   ```
+2. Open the solution file `Calculator.sln` in Visual Studio 2022.
+
+### Running the Application
+1. Navigate to the `Calculator/bin/Release/` directory.
+2. Double-click `Calculator.exe` to launch the application.
+3. Ensure that the required `.NET Framework` version is installed on your system.
+
+## Usage
+- **Number Buttons (0-9):** Click to input numbers.
+- **Operator Buttons (+, -, *, /):** Click to perform arithmetic operations.
+- **Equals Button (=):** Compute the result of the operation.
+- **Clear Button (C):** Reset the current input and history.
+- **Delete Button (DEL):** Remove the last character from the input.
+- **Percentage Button (%):** Calculate the percentage.
+
+## View Project
+![Calculator Interface](Screenshot_1.png)
+
+## Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/ivakalol/Calculator
+   ```
+3. Create a branch for your feature:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+4. Make your changes and commit:
+   ```bash
+   git commit -m "Add feature"
+   ```
+5. Push your changes:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. Open a pull request.
+
+## Future Plans
+- Add support for scientific calculations.
+- Modernize the user interface.
+- Add unit tests.
