@@ -52,13 +52,14 @@ namespace Calculator
             }
             else if (textBox1.Text.Length != 0)
             {
-                num1 = double.Parse(textBox1.Text);
-
                 Button button = (Button)sender;
                 operationPerformed = button.Text;
-                textBox1.Text += operationPerformed;
                 isOperationPerformed = true;
                 newComputation = true;
+
+                num1 = double.Parse(textBox1.Text);
+                textBox2.Text = num1.ToString() + operationPerformed;
+                textBox1.Text = "";
             }
             else
             {
@@ -113,6 +114,7 @@ namespace Calculator
         private void clear_Click(object sender, EventArgs e)
         {
             clearButton = true;
+            resultValue = 0;
             textBox1.Text = "";
             endOfComputation();
         }
@@ -147,7 +149,7 @@ namespace Calculator
                 default:
                     break;
             }
-            textBox1.Text = "";
+            textBox1.Text = resultValue.ToString();
             endOfComputation();
         }
 
@@ -166,7 +168,7 @@ namespace Calculator
             
             num1 = 0;
             num2 = 0;
-            resultValue = 0;
+            textBox2.Text = string.Empty;
             isOperationPerformed = false;
             newComputation = true;
             clearButton = false;
