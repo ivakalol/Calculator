@@ -125,37 +125,46 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
-            num2 = double.Parse(textBox1.Text);
-            switch (operationPerformed)
+            try
             {
-                case "+":
-                    resultValue = num1 + num2;
-                    break;
-                case "-":
-                    resultValue = num1 - num2;
-                    break;
-                case "*":
-                    resultValue = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 != 0)
-                    {
-                        resultValue = num1 / num2;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cannot divide by zero");
-                    }
-                    break;
-                case "%":
-                    resultValue = (num1 * num2) / 100;
-                    break;
-                default:
-                    MessageBox.Show("Error: Unknown operation.");
-                    return;
+                num2 = double.Parse(textBox1.Text);
+                switch (operationPerformed)
+                {
+                    case "+":
+                        resultValue = num1 + num2;
+                        break;
+                    case "-":
+                        resultValue = num1 - num2;
+                        break;
+                    case "*":
+                        resultValue = num1 * num2;
+                        break;
+                    case "/":
+                        if (num2 != 0)
+                        {
+                            resultValue = num1 / num2;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cannot divide by zero");
+                        }
+                        break;
+                    case "%":
+                        resultValue = (num1 * num2) / 100;
+                        break;
+                    default:
+                        MessageBox.Show("Error: Unknown operation.");
+                        return;
+                }
+                textBox1.Text = resultValue.ToString();
+                ResetComputation();
             }
-            textBox1.Text = resultValue.ToString();
-            ResetComputation();
+            catch (Exception)
+            {
+
+                MessageBox.Show("Nothing to compute, give me some equation");
+            }
+            
         }
 
         private void ResetComputation()

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.clear = new System.Windows.Forms.Button();
             this.times = new System.Windows.Forms.Button();
             this.devide = new System.Windows.Forms.Button();
@@ -59,9 +60,10 @@
             this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.clear.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.clear.Location = new System.Drawing.Point(25, 371);
+            this.clear.Location = new System.Drawing.Point(33, 457);
+            this.clear.Margin = new System.Windows.Forms.Padding(4);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(75, 51);
+            this.clear.Size = new System.Drawing.Size(100, 63);
             this.clear.TabIndex = 1;
             this.clear.Text = "CE";
             this.clear.UseVisualStyleBackColor = false;
@@ -72,9 +74,10 @@
             this.times.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.times.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.times.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.times.Location = new System.Drawing.Point(307, 448);
+            this.times.Location = new System.Drawing.Point(409, 551);
+            this.times.Margin = new System.Windows.Forms.Padding(4);
             this.times.Name = "times";
-            this.times.Size = new System.Drawing.Size(75, 51);
+            this.times.Size = new System.Drawing.Size(100, 63);
             this.times.TabIndex = 2;
             this.times.Text = "*";
             this.times.UseVisualStyleBackColor = false;
@@ -85,9 +88,10 @@
             this.devide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.devide.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.devide.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.devide.Location = new System.Drawing.Point(307, 371);
+            this.devide.Location = new System.Drawing.Point(409, 457);
+            this.devide.Margin = new System.Windows.Forms.Padding(4);
             this.devide.Name = "devide";
-            this.devide.Size = new System.Drawing.Size(75, 51);
+            this.devide.Size = new System.Drawing.Size(100, 63);
             this.devide.TabIndex = 3;
             this.devide.Text = "/";
             this.devide.UseVisualStyleBackColor = false;
@@ -98,9 +102,10 @@
             this.procent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.procent.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.procent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.procent.Location = new System.Drawing.Point(213, 371);
+            this.procent.Location = new System.Drawing.Point(284, 457);
+            this.procent.Margin = new System.Windows.Forms.Padding(4);
             this.procent.Name = "procent";
-            this.procent.Size = new System.Drawing.Size(75, 51);
+            this.procent.Size = new System.Drawing.Size(100, 63);
             this.procent.TabIndex = 4;
             this.procent.Text = "%";
             this.procent.UseVisualStyleBackColor = false;
@@ -111,9 +116,10 @@
             this.plus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.plus.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.plus.Location = new System.Drawing.Point(307, 605);
+            this.plus.Location = new System.Drawing.Point(409, 745);
+            this.plus.Margin = new System.Windows.Forms.Padding(4);
             this.plus.Name = "plus";
-            this.plus.Size = new System.Drawing.Size(75, 125);
+            this.plus.Size = new System.Drawing.Size(100, 154);
             this.plus.TabIndex = 8;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = false;
@@ -123,9 +129,10 @@
             // 
             this.nine.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nine.Location = new System.Drawing.Point(213, 448);
+            this.nine.Location = new System.Drawing.Point(284, 551);
+            this.nine.Margin = new System.Windows.Forms.Padding(4);
             this.nine.Name = "nine";
-            this.nine.Size = new System.Drawing.Size(75, 51);
+            this.nine.Size = new System.Drawing.Size(100, 63);
             this.nine.TabIndex = 7;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = true;
@@ -135,9 +142,10 @@
             // 
             this.eight.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.eight.Location = new System.Drawing.Point(118, 448);
+            this.eight.Location = new System.Drawing.Point(157, 551);
+            this.eight.Margin = new System.Windows.Forms.Padding(4);
             this.eight.Name = "eight";
-            this.eight.Size = new System.Drawing.Size(75, 51);
+            this.eight.Size = new System.Drawing.Size(100, 63);
             this.eight.TabIndex = 6;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = true;
@@ -147,9 +155,10 @@
             // 
             this.seven.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seven.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.seven.Location = new System.Drawing.Point(25, 448);
+            this.seven.Location = new System.Drawing.Point(33, 551);
+            this.seven.Margin = new System.Windows.Forms.Padding(4);
             this.seven.Name = "seven";
-            this.seven.Size = new System.Drawing.Size(75, 51);
+            this.seven.Size = new System.Drawing.Size(100, 63);
             this.seven.TabIndex = 5;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = true;
@@ -160,9 +169,10 @@
             this.minus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.minus.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.minus.Location = new System.Drawing.Point(307, 525);
+            this.minus.Location = new System.Drawing.Point(409, 646);
+            this.minus.Margin = new System.Windows.Forms.Padding(4);
             this.minus.Name = "minus";
-            this.minus.Size = new System.Drawing.Size(75, 51);
+            this.minus.Size = new System.Drawing.Size(100, 63);
             this.minus.TabIndex = 12;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = false;
@@ -172,9 +182,10 @@
             // 
             this.six.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.six.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.six.Location = new System.Drawing.Point(213, 525);
+            this.six.Location = new System.Drawing.Point(284, 646);
+            this.six.Margin = new System.Windows.Forms.Padding(4);
             this.six.Name = "six";
-            this.six.Size = new System.Drawing.Size(75, 51);
+            this.six.Size = new System.Drawing.Size(100, 63);
             this.six.TabIndex = 11;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
@@ -184,9 +195,10 @@
             // 
             this.five.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.five.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.five.Location = new System.Drawing.Point(118, 525);
+            this.five.Location = new System.Drawing.Point(157, 646);
+            this.five.Margin = new System.Windows.Forms.Padding(4);
             this.five.Name = "five";
-            this.five.Size = new System.Drawing.Size(75, 51);
+            this.five.Size = new System.Drawing.Size(100, 63);
             this.five.TabIndex = 10;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
@@ -196,9 +208,10 @@
             // 
             this.four.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.four.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.four.Location = new System.Drawing.Point(25, 525);
+            this.four.Location = new System.Drawing.Point(33, 646);
+            this.four.Margin = new System.Windows.Forms.Padding(4);
             this.four.Name = "four";
-            this.four.Size = new System.Drawing.Size(75, 51);
+            this.four.Size = new System.Drawing.Size(100, 63);
             this.four.TabIndex = 9;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = true;
@@ -208,9 +221,10 @@
             // 
             this.zero.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.zero.Location = new System.Drawing.Point(25, 679);
+            this.zero.Location = new System.Drawing.Point(33, 836);
+            this.zero.Margin = new System.Windows.Forms.Padding(4);
             this.zero.Name = "zero";
-            this.zero.Size = new System.Drawing.Size(75, 51);
+            this.zero.Size = new System.Drawing.Size(100, 63);
             this.zero.TabIndex = 16;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = true;
@@ -220,9 +234,10 @@
             // 
             this.three.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.three.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.three.Location = new System.Drawing.Point(213, 605);
+            this.three.Location = new System.Drawing.Point(284, 745);
+            this.three.Margin = new System.Windows.Forms.Padding(4);
             this.three.Name = "three";
-            this.three.Size = new System.Drawing.Size(75, 51);
+            this.three.Size = new System.Drawing.Size(100, 63);
             this.three.TabIndex = 15;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
@@ -232,9 +247,10 @@
             // 
             this.two.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.two.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.two.Location = new System.Drawing.Point(118, 605);
+            this.two.Location = new System.Drawing.Point(157, 745);
+            this.two.Margin = new System.Windows.Forms.Padding(4);
             this.two.Name = "two";
-            this.two.Size = new System.Drawing.Size(75, 51);
+            this.two.Size = new System.Drawing.Size(100, 63);
             this.two.TabIndex = 14;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = true;
@@ -244,9 +260,10 @@
             // 
             this.one.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.one.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.one.Location = new System.Drawing.Point(25, 605);
+            this.one.Location = new System.Drawing.Point(33, 745);
+            this.one.Margin = new System.Windows.Forms.Padding(4);
             this.one.Name = "one";
-            this.one.Size = new System.Drawing.Size(75, 51);
+            this.one.Size = new System.Drawing.Size(100, 63);
             this.one.TabIndex = 13;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
@@ -256,9 +273,10 @@
             // 
             this.point.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.point.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.point.Location = new System.Drawing.Point(118, 679);
+            this.point.Location = new System.Drawing.Point(157, 836);
+            this.point.Margin = new System.Windows.Forms.Padding(4);
             this.point.Name = "point";
-            this.point.Size = new System.Drawing.Size(75, 51);
+            this.point.Size = new System.Drawing.Size(100, 63);
             this.point.TabIndex = 17;
             this.point.Text = ".";
             this.point.UseVisualStyleBackColor = true;
@@ -268,9 +286,10 @@
             // 
             this.equals.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equals.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.equals.Location = new System.Drawing.Point(213, 679);
+            this.equals.Location = new System.Drawing.Point(284, 836);
+            this.equals.Margin = new System.Windows.Forms.Padding(4);
             this.equals.Name = "equals";
-            this.equals.Size = new System.Drawing.Size(75, 51);
+            this.equals.Size = new System.Drawing.Size(100, 63);
             this.equals.TabIndex = 18;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = true;
@@ -281,9 +300,10 @@
             this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.delete.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.delete.Location = new System.Drawing.Point(118, 371);
+            this.delete.Location = new System.Drawing.Point(157, 457);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(75, 51);
+            this.delete.Size = new System.Drawing.Size(100, 63);
             this.delete.TabIndex = 19;
             this.delete.Text = "⌫";
             this.delete.UseVisualStyleBackColor = false;
@@ -294,12 +314,13 @@
             this.textBox1.BackColor = System.Drawing.Color.IndianRed;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(12, 270);
+            this.textBox1.Location = new System.Drawing.Point(16, 332);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 3267777;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(383, 86);
+            this.textBox1.Size = new System.Drawing.Size(509, 106);
             this.textBox1.TabIndex = 21;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -309,11 +330,12 @@
             this.History.BackColor = System.Drawing.Color.LightCoral;
             this.History.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.History.FormattingEnabled = true;
-            this.History.ItemHeight = 24;
-            this.History.Location = new System.Drawing.Point(12, 9);
+            this.History.ItemHeight = 32;
+            this.History.Location = new System.Drawing.Point(16, 11);
+            this.History.Margin = new System.Windows.Forms.Padding(4);
             this.History.Name = "History";
             this.History.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.History.Size = new System.Drawing.Size(383, 196);
+            this.History.Size = new System.Drawing.Size(509, 228);
             this.History.TabIndex = 23;
             this.History.SelectedIndexChanged += new System.EventHandler(this.History_SelectedIndexChanged);
             // 
@@ -324,9 +346,10 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(335, 204);
+            this.label1.Location = new System.Drawing.Point(447, 251);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 24;
             this.label1.Text = "History";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -342,9 +365,10 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 250);
+            this.label2.Location = new System.Drawing.Point(16, 308);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 25;
             this.label2.Text = "Calculator";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -355,19 +379,20 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(158, 238);
+            this.textBox2.Location = new System.Drawing.Point(211, 293);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 26);
+            this.textBox2.Size = new System.Drawing.Size(316, 33);
             this.textBox2.TabIndex = 26;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Calculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(407, 756);
+            this.ClientSize = new System.Drawing.Size(543, 930);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -394,6 +419,8 @@
             this.Controls.Add(this.clear);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
